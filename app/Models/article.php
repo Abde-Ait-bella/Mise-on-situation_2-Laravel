@@ -10,13 +10,20 @@ class article extends Model
     /** @use HasFactory<\Database\Factories\ArticleFactory> */
     use HasFactory;
 
-    public function tag()
+    protected $fillable = [
+        'title',
+        'description',
+        'user_id'
+    ];
+
+
+    public function tags()
     {
-        $this->belongsToMany(tag::class);
+        return $this->belongsToMany(Tag::class);
     }
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }

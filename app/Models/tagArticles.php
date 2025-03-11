@@ -10,5 +10,5 @@ class tagArticles extends Model
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
 
-    protected $table = "table_tags_articles";
+    protected $table = "article_tag";
 }
