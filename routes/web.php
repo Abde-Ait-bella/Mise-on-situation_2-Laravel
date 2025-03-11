@@ -8,4 +8,4 @@ Route::get('/', function () {
     return view('Home');
 });
 
-Route::post('login', [AuthController::class, 'login'])->middleware();
+Route::post('login', [AuthController::class, 'login']);
